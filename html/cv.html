@@ -1,0 +1,189 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="../css/cv.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>CV</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="grid-container" id="nav">
+        <div class="grid-item1">
+            <a href="/"> Gallery </a>
+        </div>
+        <div class="grid-item2">
+            <a href="/cv"> About Me </a>
+        </div>
+
+        <div class="grid-item3">
+            <a href="/show">
+                <div class="home"></div>
+            </a>
+        </div>
+
+        <div class="grid-item4">
+            <a href="https://play.google.com/store/apps/details?id=lv.ddm.OceanYard" target="_blank"> Ocean Yard </a>
+        </div>
+        <div class="grid-item5">
+            <a href="https://connect.unity.com/p/5ab13a2c0909150014766da0" target="_blank"> CubeO </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="links">
+        <div class="grid-item1">
+            <a target="_blank" href="https://www.linkedin.com/in/alexander-domkov-78516b116">
+                <div class="linkedIn_link"></div>
+            </a>
+        </div>
+        <div class="grid-item2">
+            <a target="_blank" href="https://www.artstation.com/hitchhicker">
+                <div class="artstation_link"></div>
+            </a>
+        </div>
+        <div class="grid-item3">
+            <a target="_blank" href="https://drive.google.com/open?id=1T_XsxdGDe6kp8IfLkqh4t0jwaYyO2qSx">
+                <div class="drive_link"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="bod1">
+        <div class="grid-item1"></div>
+        <div class="grid-item2">
+            <p id="line1">Hello,</p>
+            <p id="line2">My name is</p>
+            <p id="name">Aleksander Domkov</p>
+            <p id="o">Graduate</p>
+            <p id="t">3D Modelling & Texturing</p>
+            <p id="tt">3D Visualisation</p>
+            <p id="f">Web Design</p>
+            <p id="ff">Front-End Development</p>
+            <p id="s">Unity Development</p>
+            <div id="picture"></div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="bod2">
+        <div class="grid-item1" id="about">
+            <div id="about_me_sign"></div>
+            <p>
+                Hardworking, punctual and open-minded BSc (Hons) Multimedia Computing graduate from Coventry University. Able to work with
+                various content creation packages, have experience in creating digital images for different purposes and
+                was engaged in a few projects in Unity 3D ( one of which officially published on Google Play Store and App
+                Store). Confident with creating applications and content for websites, applications, games, movies. Currently
+                looking for a job or internship opportunity in web,app or 3D design and gaining experience in industry. I’m
+                confident with creating applications and content for websites, applications, games, movies. Currently looking
+                for a job opportunity in web, app or game design and gaining experience in industry.
+            </p>
+        </div>
+        <div class="grid-item2"> </div>
+    </div>
+
+    <div class="grid-container" id="bod3">
+        <div class="grid-item1">
+            <div id="cover"></div>
+            <p>
+                I'm a graduate experienced in content creation for different purposes. This includes 2D/3D assets, Videography, Photography,
+                Realistic Rendering and Front-End Development.
+            </p>
+            <p>
+                I made a few games myself, one of them is currently available on app store and play store and the other is in development.
+                There is more information about them in my CV, LinkedIn, or above in the menu.
+            </p>
+            <p>
+                I'm a graduate experienced in content creation for different purposes. This includes 2D/3D assets, Videography, Photography,
+                Realistic Rendering and Front-End Development.
+            </p>
+            <p>
+                I’m experienced with Adobe Suite, especially Illustrator, Photoshop, Premiere, After Effects and Lightroom. I also own ACA
+                certificates for Illustrator and Photoshop.
+            </p>
+            <p>
+                A large amount of group work in University taught me how to build strong relationships with any team member and use those
+                connections to get the work done in time. I’m able to work in extreme conditions and short deadlines. I’ve
+                also perfected the “can do” attitude to any task given and I’ll give my 150% to complete.
+            </p>
+            <p>
+                For 3D modelling and texturing, I’m using Blender, because of how fast it is (and free, of course). However, I do have 3ds
+                Max experience and do not mind learning new 3D software, if needed.
+            </p>
+        </div>
+        <div class="grid-item2"> </div>
+        <div class="grid-item3">
+            <div id="GetinTouch"></div>
+            <a href="../images/Aleksandrs Domkov_CV.pdf" download>
+                <div id="File"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="bod4">
+        <div class="grid-item1"></div>
+    </div>
+
+</body>
+<footer>
+    <script> // make the whole div clickable, instead of only "a" inside
+        $("#nav > div").click(function () {
+            window.location = $(this).find("a").attr("href");
+            return false;
+        });
+    </script>
+    <script> // show navbar background on scroll
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            // console.log(y);
+            if (y < 50) {
+                $('.grid-container#nav').css("background-color", "transparent");
+                $('.grid-container#nav, .home').css("height", "55px");
+
+                $('.grid-container#nav > div:not(.grid-item3)').css("margin", "5px 0");
+
+                $('.home').css("width", "55px");
+                $('.home').css("background-image", "url(../images/water_white.png)");
+
+                $('a').css("font-size", "1.05em");
+            }
+            else {
+                $('.grid-container#nav').css("background-color", "white");
+                $('.grid-container#nav, .home').css("height", "35px");
+                $('.grid-container#nav > div:not(.grid-item3)').css("margin", "0 0");
+
+                $('.home').css("width", "35px");
+                $('.home').css("background-image", "url(../images/water_black.png)");
+
+                $('a').css("font-size", "0.8em");
+            }
+        });
+    </script>
+    <script> // play animation on scroll above 500
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y < 500) {
+                $("#bod3 div:not(.grid-item2), #bod3 p").removeClass(" run_animation_up");
+            }
+            else {
+                $("#bod3 div:not(.grid-item2), #bod3 p").addClass(" run_animation_up");
+            }
+        });
+    </script>
+    <script> // scroll to y=10, when document is ready (page loaded)
+        $(document).ready(function () {
+            $("html,body").animate({ scrollTop: 10 }, 1000);
+        });
+    </script>
+    <script> // smooth scrolling
+        window.scroll({
+            top: 2500,
+            left: 0,
+            behavior: 'smooth'
+        });
+    </script>
+</footer>
+
+</html>

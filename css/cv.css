@@ -1,0 +1,360 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/intro_back2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Nav */
+.grid-container#nav
+{
+    display: grid;
+    grid-template-columns: 150px 150px auto 150px 150px;
+    grid-gap: 10px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#nav > div:not(.grid-item3):hover
+{
+    border-radius: 25px;
+}
+
+.grid-container#nav > div:not(.grid-item3)
+{
+    background-color: #B55252;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.home
+{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    transition: 1s
+}
+
+.home:hover
+{
+    transform: rotateZ(360deg)
+}
+
+/* body */
+body:nth-child(2)
+{
+    margin-top: 75px;
+}
+
+.grid-container#bod1, .grid-container#bod2, .grid-container#bod3, .grid-container#bod4
+{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 750px;
+    grid-template-columns: 100%;
+    grid-gap: 0px;
+    margin: auto;
+    padding: 0;
+    background-color: white;
+}
+.grid-container#bod1
+{
+    grid-template-columns: 35% 65%;
+    background-color: rgb(228, 224, 224);
+}
+.grid-container#bod1 .grid-item1
+{
+    background-image: url(../images/houses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.grid-container#bod1 .grid-item2
+{
+    background-image: url(../images/octo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+.grid-container#bod2
+{
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 300px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+#bod2 #about_me_sign
+{
+    margin-top: 20px;
+    background-image: url(../images/summary.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 300px;
+}
+.grid-container#bod2 p
+{
+    animation: intro 1s;
+}
+
+
+
+.grid-container#bod3
+{
+    margin-top:100px;
+    grid-template-columns: 64% 1% 35%;
+    line-height: 1.6; 
+}
+#bod3 #cover
+{
+    margin-top: 30px;
+    background-image: url(../images/more.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 600px;
+}
+#bod3 .grid-item2
+{
+    background-image: url(../images/houses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+#bod3 p
+{
+    margin: 30px 200px 0 30px ;
+    font-size: 1.2em;
+}
+#bod3 .grid-item1 > p:not(:first-child)
+{
+    margin-top: 30px
+}
+#GetinTouch
+{
+    width: 600px;
+    height: 200px;
+    background-image: url(../images/CV_download.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-top: 15px;
+}
+#File
+{
+    width: 400px;
+    height: 400px;
+    background-image: url(../images/cv_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-top: 50px; 
+    transition: 1s;
+}
+#File:hover
+{
+    animation: jump 0.5s ease-in infinite;
+}
+.run_animation_up
+{
+    animation: up 1s;
+}
+@keyframes up
+{
+    0% {transform: translateY(50px); opacity: 0}
+    100% {transform: translateY(0); opacity: 100}
+}
+
+@keyframes jump
+{
+    0% {transform: translateY(-50px)}
+    50% {transform: translateY(0);transform:scale(1.1,0.9)}
+    100% {transform: translateY(-50px)}
+}
+
+
+.grid-container#bod4
+{
+    grid-template-columns: 100%;
+    grid-template-rows: 50px;
+    background-color: transparent;
+}
+
+/* all p */
+.grid-item2 > p 
+{
+    margin-left: 25px;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+
+#about > p
+{
+    margin-left: 25px;
+    margin-top: 15px;
+    color: black;
+}
+
+/* intro */
+.grid-container#bod1 .grid-item2 #line1
+{
+    margin-top: 200px;
+}
+#line1
+{
+    font-size: 2em;
+    animation: intro 3s;
+}
+#line2
+{
+    font-size: 2em;
+    animation: intro 2s;
+}
+
+@keyframes intro
+{
+    0% {transform: translateY(-50px); opacity: 0}
+    100% {transform: translateY(0); opacity: 100}
+}
+
+/* name */
+p#name
+{
+    font-weight: 900;
+    font-size: 4em;
+    animation: intro 1s;
+}
+
+/* additional lines */
+p#o
+{
+    margin-top:100px;
+    animation: add_lines 0.5s;
+}
+p#t
+{
+    animation: add_lines 1s;
+}
+p#tt
+{
+    animation: add_lines 1.5s;
+}
+p#f
+{
+    animation: add_lines 2s;
+}
+p#ff
+{
+    animation: add_lines 2.5s;
+}
+p#s
+{
+    animation: add_lines 3s;
+}
+
+@keyframes add_lines
+{
+    0% {transform: translateX(-50px); opacity: 0}
+    50% {opacity: 0}
+    100% {transform: translateX(0); opacity: 100}
+}
+
+/* picture relative */
+div#picture
+{
+    height:350px;
+    width: 500px;
+    display: block;
+    background-image: url(../images/soft_2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    margin-left: auto;
+    top:-100px;
+    animation: intro 1s;
+    z-index: 1;
+}
+
+/* hrefs */
+a, a:hover
+{
+    text-decoration: none;
+    color: white;
+    outline: 0;
+}
+
+.grid-container#links
+{
+    display: grid;
+    grid-gap: 10px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px 50px;
+}
+.artstation_link, .linkedIn_link, .drive_link
+{
+    display: block;
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    z-index: 1000;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.artstation_link:hover, .linkedIn_link:hover, .drive_link:hover
+{
+    height: 60px;
+    width: 60px;
+}
+
+.linkedIn_link
+{
+    background-image: url(../images/linked.png);
+    animation: up 0.5s;
+}
+.artstation_link
+{
+    background-image: url(../images/art.png);
+    animation: up 1s;
+}
+.drive_link
+{
+    background-image: url(../images/google-drive.png);
+    animation: up 1.5s;
+}

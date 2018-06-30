@@ -1,0 +1,178 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/intro_back2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Nav */
+.grid-container#nav
+{
+    display: grid;
+    grid-template-columns: 150px 150px auto 150px 150px;
+    grid-gap: 10px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#nav > div:not(.grid-item3):hover
+{
+    border-radius: 25px;
+}
+
+.grid-container#nav > div:not(.grid-item3)
+{
+    background-color: #B55252;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.home
+{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.home:hover
+{
+    transform: rotateZ(360deg)
+}
+
+
+/* Posts */
+body:nth-child(2)
+{
+    margin-top: 75px;
+}
+
+.grid-container#post, .grid-container#post2, .grid-container#post3, .grid-container#post4
+{
+    width: 85%;
+    display: grid;
+    grid-template-rows: 500px;
+    grid-gap: 10px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0;
+}
+
+
+@keyframes load
+{
+    0% {transform: translateY(10px);opacity:0.25;}
+    100% {transform: translateY(0px);opacity:1;}
+}
+#post > div,#post2 > div,#post3 > div,#post4 > div
+{
+    animation: load 1s;
+}
+
+.grid-container#post
+{
+    grid-template-columns: 35% 64.4%;
+}
+
+.grid-container#post2
+{
+    grid-template-columns: 64.4% 35%;
+}
+
+.grid-container#post3
+{
+    grid-template-columns: 25% auto auto;
+}
+
+.grid-container#post4
+{
+    grid-template-columns: 100%;
+}
+
+.grid-container:not(#nav)> div
+{
+    background-color: black;
+    background-image: url(../images/icon.png);
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+.grid-container:not(#nav)> div img
+{
+    animation: opacity_change_out 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.grid-container:not(#nav)> div img:hover
+{
+    animation: opacity_change_in 0.5s ease-in-out;
+    opacity: 0.25;
+}
+
+
+.grid-container:not(#nav)> div:hover
+{
+    animation: scale_change 0.5s ease-in-out;
+    background-size: 240px 240px;
+}
+
+
+@keyframes opacity_change_in
+{
+    0% {opacity: 1}
+    100% {opacity: 0.25}
+}
+
+@keyframes opacity_change_out
+{
+    0% {opacity: 0.25}
+    100% {opacity: 1}
+}
+
+@keyframes scale_change
+{
+    0% {background-size: 256px 256px}
+    100% {background-size: 240px 240px}
+}
+
+/* footer */
+.foot
+{
+    width: 100%;
+    height: 35px;
+    bottom: 1;
+}
+
+/* hrefs */
+a, a:hover
+{
+    text-decoration: none;
+    color: white;
+    outline: 0;
+}

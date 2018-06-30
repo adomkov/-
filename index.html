@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Portlio</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="grid-container" id="nav">
+        <div class="grid-item1">
+            <a href="/"> Gallery </a>
+        </div>
+        <div class="grid-item2">
+            <a href="/cv"> About Me </a>
+        </div>
+
+        <div class="grid-item3">
+            <a href="/show">
+                <div class="home"></div>
+            </a>
+        </div>
+
+        <div class="grid-item4">
+            <a href="https://play.google.com/store/apps/details?id=lv.ddm.OceanYard" target="_blank"> Ocean Yard </a>
+        </div>
+        <div class="grid-item5">
+            <a href="https://connect.unity.com/p/5ab13a2c0909150014766da0" target="_blank"> CubeO </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="post">
+        <div class="grid-item1">
+            <a target="_blank" href="https://www.artstation.com/artwork/gzaVm">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/011/455/825/large/alexander-domkov-2-3-2.jpg?1529667782" alt="Unexpected Catch"
+                    style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+        <div class="grid-item2">
+            <a target="_blank" href="https://www.artstation.com/artwork/lobDJ">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/011/047/539/large/alexander-domkov-camera-edit.jpg?1527597089"
+                    alt="Peace.Frendship.Bubblegum" style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="post2">
+        <div class="grid-item1">
+            <a target="_blank" href="https://www.artstation.com/artwork/9qezN">
+                <img src="https://cdna.artstation.com/p/assets/images/images/010/215/318/large/alexander-domkov-last.jpg?1523220354" alt="No More"
+                    style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+        <div class="grid-item2">
+            <a target="_blank" href="https://www.artstation.com/artwork/9qezN">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/010/215/423/large/alexander-domkov-bulb-no.jpg?1523220785" alt="No"
+                    style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="post3">
+        <div class="grid-item1">
+            <a target="_blank" href="https://www.artstation.com/artwork/eB8VP">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/009/902/777/large/alexander-domkov-final-edit-with-blur-edit.jpg?1521497729"
+                    alt="Dirty Stairs" style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+        <div class="grid-item2">
+            <a target="_blank" href="https://www.artstation.com/artwork/rk5Jm">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/009/701/677/large/alexander-domkov-abibos.jpg?1520417759" alt="Abibos"
+                    style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+        <div class="grid-item3">
+            <a target="_blank" href="https://www.artstation.com/artwork/GRzkQ">
+                <img src="https://cdna.artstation.com/p/assets/images/images/009/627/932/large/alexander-domkov-hope-edit.jpg?1520017314"
+                    alt="Hope" style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div class="grid-container" id="post4">
+        <div class="grid-item1">
+            <a target="_blank" href="https://www.artstation.com/artwork/Gl5KQ">
+                <img src="https://cdna.artstation.com/p/assets/images/images/009/499/256/large/alexander-domkov-wip2.jpg?1519328304" alt="Guardian"
+                    style="object-fit:cover; height: 100%; width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div class="foot"> </div>
+</body>
+<footer>
+    <script> // make the whole div clickable, instead of only "a" inside
+        $("#nav > div").click(function () {
+            window.location = $(this).find("a").attr("href");
+            return false;
+        });
+    </script>
+    <script> // show navbar background on scroll
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            // console.log(y);
+            if (y < 50) {
+                $('.grid-container#nav').css("background-color", "transparent");
+                $('.grid-container#nav, .home').css("height", "55px");
+
+                $('.grid-container#nav > div:not(.grid-item3)').css("margin", "5px 0");
+
+                $('.home').css("width", "55px");
+                $('.home').css("background-image", "url(../images/water_white.png)");
+
+                $('*').css("font-size", "1.05em");
+            }
+            else {
+                $('.grid-container#nav').css("background-color", "white");
+                $('.grid-container#nav, .home').css("height", "35px");
+                $('.grid-container#nav > div:not(.grid-item3)').css("margin", "0 0");
+
+                $('.home').css("width", "35px");
+                $('.home').css("background-image", "url(../images/water_black.png)");
+
+                $('*').css("font-size", "0.92em");
+            }
+        });
+    </script>
+    <script> // scroll to y=10, when document is ready (page loaded)
+        $(document).ready(function () {
+            $("html,body").animate({ scrollTop: 10 }, 1000);
+        });
+    </script>
+    <script> // smooth scrolling
+        window.scroll({
+            top: 2500,
+            left: 0,
+            behavior: 'smooth'
+        });
+    </script>
+</footer>
+
+</html>
