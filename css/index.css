@@ -64,6 +64,60 @@ html,body
     transform: rotateZ(360deg)
 }
 
+/* Nav_mobile */
+.grid-container#nav_mobile
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 10% 3% 20% 20% 20% 20% auto;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1.6;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+.grid-container#nav_mobile div.grid-item1,.grid-container#nav_mobile div.grid-item3
+{
+    height: 5px;
+}
+.open_menu
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/water_black.png);
+    height: 40px;
+    width: 40px;
+    margin: auto;
+}
+
+.grid-container#nav_mobile div div:not(.open_menu)
+{
+    padding: 20px;
+}
+
+.grid-container#nav_mobile > div:not(.grid-item1):not(.grid-item2):not(.grid-item3):not(.grid-item8)
+{
+    height: 90%;
+    background-color: #B55252;
+}
+.show_tabs
+{
+    animation: show_tabs 0.5s ease-in-out;
+}
+
+@keyframes show_tabs
+{
+    0% {transform: translateX(100px); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+}
 
 /* Posts */
 body:nth-child(2)
@@ -114,7 +168,7 @@ body:nth-child(2)
     grid-template-columns: 100%;
 }
 
-.grid-container:not(#nav)> div
+.grid-container:not(#nav,#nav_mobile)> div
 {
     background-color: black;
     background-image: url(../images/icon.png);
@@ -167,10 +221,34 @@ a, a:hover
 
 
 
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (max-width: 1024px) 
+{
     .grid-container#post, .grid-container#post2, .grid-container#post3, .grid-container#post4
     {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .grid-container#nav_mobile
+    {
+        display: grid;
+    }
+    .grid-container#nav
+    {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 450px) 
+{
+    .grid-container#nav_mobile
+    {
+        display: none;
+    }
+    .grid-container#nav
+    {
+        display: grid;
     }
 }
