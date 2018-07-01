@@ -545,21 +545,22 @@ a, a:hover
 
     .grid-container#bod1
     {
-        height: 75%;
+        height: auto;
         grid-template-columns: 0 100%;
     }
-
+    .grid-container#bod1 .grid-item2
+    {
+        padding-bottom: 20px;
+    }
     .grid-container#bod2
     {
-        height: 60%;
+        height: auto;
         grid-template-columns: 100%;
         font-size: 1em;
     }
     #about > p
     {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 15px;
+        margin: 20px;
     }
     p#o
     {
@@ -573,7 +574,7 @@ a, a:hover
         background-size: contain;
         background-repeat: no-repeat;
         height: 50px;
-        width: 400px;
+        width: auto;
     }
 
     .grid-container#bod3
@@ -610,7 +611,7 @@ a, a:hover
     {
         margin-top: 20px;
         height: 50px;
-        width: 200px;
+        width: auto;
     }
 }
 
