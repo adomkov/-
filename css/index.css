@@ -75,7 +75,7 @@ body:nth-child(2)
 {
     width: 85%;
     display: grid;
-    grid-template-rows: 500px;
+    grid-template-rows: 15%;
     grid-gap: 10px;
     margin: auto;
     margin-top: 10px;
@@ -88,6 +88,7 @@ body:nth-child(2)
     0% {transform: translateY(10px);opacity:0.25;}
     100% {transform: translateY(0px);opacity:1;}
 }
+
 #post > div,#post2 > div,#post3 > div,#post4 > div
 {
     animation: load 1s;
@@ -121,39 +122,26 @@ body:nth-child(2)
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+    transition: 0.5s;
 }
 
 .grid-container:not(#nav)> div img
 {
-    animation: opacity_change_out 0.5s ease-in-out;
     opacity: 1;
+    transition: 0.5s;
 }
 
 .grid-container:not(#nav)> div img:hover
 {
-    animation: opacity_change_in 0.5s ease-in-out;
     opacity: 0.25;
 }
 
 
 .grid-container:not(#nav)> div:hover
 {
-    animation: scale_change 0.5s ease-in-out;
     background-size: 240px 240px;
 }
 
-
-@keyframes opacity_change_in
-{
-    0% {opacity: 1}
-    100% {opacity: 0.25}
-}
-
-@keyframes opacity_change_out
-{
-    0% {opacity: 0.25}
-    100% {opacity: 1}
-}
 
 @keyframes scale_change
 {
@@ -175,4 +163,14 @@ a, a:hover
     text-decoration: none;
     color: white;
     outline: 0;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .grid-container#post, .grid-container#post2, .grid-container#post3, .grid-container#post4
+    {
+        width: 90%;
+    }
 }
