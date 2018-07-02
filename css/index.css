@@ -9,7 +9,7 @@ html,body
 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/intro_back2.jpg);
+    background-image: url(../images/intro_back2_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,7 +168,7 @@ body:nth-child(2)
     grid-template-columns: 100%;
 }
 
-.grid-container:not(#nav,#nav_mobile)> div
+.grid-container:not(#nav):not(#nav_mobile) > div
 {
     background-color: black;
     background-image: url(../images/icon.png);

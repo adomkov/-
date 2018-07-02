@@ -1,8 +1,8 @@
-html,body,video
+html,body
 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/intro_back2.jpg);
+    background-image: url(../images/intro_back2_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,12 +12,49 @@ html,body,video
     padding: 0;
 }
 
-video {
-    position: fixed;
-    right: 0;
+.video_container {
+    position: absolute;
+    top: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  
+  .video_container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+    
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+    
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay 
+{
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    height: 100px;
+    max-width: 45em;
+    margin: auto auto 1em;
+    box-sizing: border-box;
+    padding: 30px;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+    color: white;
 }
 
 /* Nav */

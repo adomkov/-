@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link href="../css/show.css" type="text/css" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>Showreel</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,30 +27,16 @@
             </a>
         </div>
     </div>
-    <video autoplay muted loop controls>
-        <source src="../images/show.mp4" type="video/mp4">
-    </video>
+    <div class="video_container">
+        <video autoplay muted loop controls width="1920" height="1080">
+            <source src="../images/show.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay">
+        This video is going to be replaced soon
+    </div>
 </body>
 <footer>
-    <!-- <script>
-        var video = document.getElementById("vid");
-
-        var btn = document.getElementsByClassName("fullScreen");
-
-        function fullScreen() {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            }
-            else if (video.webkitrequestFullscreen) {
-                video.webkitRequestFullscreen();
-            }
-            else if (video.mozRequestFullscreen) {
-                video.mozRequestFullScreen();
-            }
-
-            console.log("run");
-        }
-    </script> -->
     <script>
         window.scroll({
             top: 2500,
